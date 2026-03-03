@@ -70,8 +70,8 @@ export function ContactForm({
   const inputStyles = cn(
     "w-full rounded-xl border px-4 py-3 text-sm shadow-sm transition focus:outline-none focus:ring-2",
     isDark
-      ? "border-teal-300/20 bg-black/55 text-white placeholder:text-slate-500 focus:border-teal-300 focus:ring-teal-300/30"
-      : "border-slate-300 bg-zinc-950/35 text-slate-100 placeholder:text-slate-500 focus:border-teal-300 focus:ring-teal-300/30"
+      ? "border-teal-300/20 bg-black/55 text-white placeholder:text-slate-400 focus:border-teal-300 focus:ring-teal-300/30"
+      : "border-white/15 bg-zinc-950/35 text-slate-100 placeholder:text-slate-400 focus:border-teal-300 focus:ring-teal-300/30"
   )
 
   const labelStyles = cn(

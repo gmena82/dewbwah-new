@@ -244,14 +244,14 @@ function SocialProofTicker() {
   ]
 
   return (
-    <div className="overflow-hidden border-b border-slate-100 bg-slate-50 py-4">
+    <div className="overflow-hidden border-b border-white/10 bg-zinc-900/60 py-4">
       <div className="animate-ticker flex whitespace-nowrap">
         {[...items, ...items].map((item, index) => (
           <span
             key={index}
-            className="mx-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-600"
+            className="mx-8 inline-flex items-center gap-2 text-sm font-semibold text-slate-400"
           >
-            <span className="size-1.5 rounded-full bg-teal-500" />
+            <span className="size-1.5 rounded-full bg-teal-500/100" />
             {item}
           </span>
         ))}
@@ -262,7 +262,7 @@ function SocialProofTicker() {
 
 function ProblemSolutionSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-zinc-950">
       <div className="container-padding mx-auto max-w-7xl">
         <motion.div
           initial="initial"
@@ -273,11 +273,11 @@ function ProblemSolutionSection() {
         >
           <motion.span
             variants={fadeInUp}
-            className="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700"
+            className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300"
           >
             The Problem
           </motion.span>
-          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-900">
+          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-100">
             Sick of Agencies That Ghost You?
           </motion.h2>
           <motion.p variants={fadeInUp} className="body-large mx-auto mt-4 max-w-2xl">
@@ -308,7 +308,7 @@ function ProblemSolutionSection() {
                   <span className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
                     ✕
                   </span>
-                  <span className="text-slate-700">{problem}</span>
+                  <span className="text-slate-300">{problem}</span>
                 </motion.li>
               ))}
             </ul>
@@ -319,9 +319,9 @@ function ProblemSolutionSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl border-2 border-teal-100 bg-teal-50/50 p-8"
+            className="rounded-3xl border-2 border-teal-100 bg-teal-500/12 p-8"
           >
-            <h3 className="text-xl font-bold text-teal-700">What We Actually Do:</h3>
+            <h3 className="text-xl font-bold text-teal-300">What We Actually Do:</h3>
             <ul className="mt-6 space-y-4">
               {SOLUTIONS.map((solution, index) => (
                 <motion.li
@@ -332,8 +332,8 @@ function ProblemSolutionSection() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="mt-0.5 size-6 shrink-0 text-teal-600" />
-                  <span className="text-slate-700">{solution}</span>
+                  <CheckCircle2 className="mt-0.5 size-6 shrink-0 text-teal-300" />
+                  <span className="text-slate-300">{solution}</span>
                 </motion.li>
               ))}
             </ul>
@@ -344,14 +344,14 @@ function ProblemSolutionSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 text-center text-lg font-semibold text-teal-700"
+          className="mt-12 text-center text-lg font-semibold text-teal-300"
         >
           We don&apos;t use made-up words or fluffy reports as to why you don&apos;t have leads. We get
           sh*t done.
         </motion.p>
 
         {/* Website Offerings */}
-        <div className="relative mt-14 overflow-hidden rounded-3xl border border-slate-100 bg-slate-50">
+        <div className="relative mt-14 overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/60">
           <div className="pointer-events-none absolute inset-0 opacity-60">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(15,118,110,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-teal-50/60" />
@@ -361,24 +361,24 @@ function ProblemSolutionSection() {
             <div>
               <div className="mb-5 inline-flex items-center gap-3">
                 <span className="relative inline-flex size-11 items-center justify-center rounded-full bg-white/70 shadow-lg shadow-teal-600/15 ring-1 ring-teal-200/60 backdrop-blur">
-                  <svg viewBox="0 0 48 48" className="size-7 text-teal-700" fill="none" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" className="size-7 text-teal-300" fill="none" aria-hidden="true">
                     <path d="M24 6c7.732 0 14 4.768 14 10.65 0 4.34-3.403 8.07-8.278 9.74C25.75 27.93 23 31.23 23 36c0 3.88 1.58 6.47 4.73 7.77" stroke="url(#g)" strokeWidth="3.25" strokeLinecap="round" />
                     <path d="M22 42c-7.732 0-14-4.768-14-10.65 0-4.34 3.403-8.07 8.278-9.74C20.25 20.07 23 16.77 23 12c0-3.88-1.58-6.47-4.73-7.77" stroke="url(#g)" strokeWidth="3.25" strokeLinecap="round" opacity="0.9" />
                     <defs><linearGradient id="g" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stopColor="#0F766E" /><stop offset="1" stopColor="#22D3EE" /></linearGradient></defs>
                   </svg>
                   <span className="pointer-events-none absolute -inset-3 rounded-full bg-teal-400/10 blur-2xl" />
                 </span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                   Website Products. Endless Possibilities.
                 </span>
               </div>
 
-              <h3 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              <h3 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
                 Stunning Website Designs That{" "}
-                <span className="text-teal-700">Close Clients</span>
+                <span className="text-teal-300">Close Clients</span>
               </h3>
 
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
                 Your website isn&apos;t a brochure — it&apos;s a lead machine. Fast, clean, and built
                 to turn visitors into calls.
               </p>
@@ -391,33 +391,33 @@ function ProblemSolutionSection() {
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-teal-600 to-cyan-500" />
-                <h4 className="text-2xl font-extrabold tracking-tight text-slate-900">Custom</h4>
-                <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-700">Designed Websites</p>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <h4 className="text-2xl font-extrabold tracking-tight text-slate-100">Custom</h4>
+                <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-300">Designed Websites</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
                   Your site is designed to convert, featuring clear CTAs and optimized lead forms that
                   transform traffic into revenue. We handle the heavy lifting by writing the copy and
                   structuring a seamless flow that makes the next step obvious.
                 </p>
                 <div className="mt-4 flex justify-end">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition-colors group-hover:border-teal-200 group-hover:text-teal-700">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-slate-400 transition-colors group-hover:border-teal-200 group-hover:text-teal-300">
                     <ArrowRight className="size-5" />
                   </span>
                 </div>
               </div>
 
-              <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500" />
-                <h4 className="text-2xl font-extrabold tracking-tight text-slate-900">Frequent</h4>
-                <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-700">Website Updates</p>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <h4 className="text-2xl font-extrabold tracking-tight text-slate-100">Frequent</h4>
+                <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-300">Website Updates</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
                   We keep your digital pulse strong so Google and AI models recognize you as an active
                   leader. We continuously add fresh service pages, refine FAQs, and deploy strategic
                   content updates that signal relevance to search engines.
                 </p>
                 <div className="mt-4 flex justify-end">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition-colors group-hover:border-teal-200 group-hover:text-teal-700">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-slate-400 transition-colors group-hover:border-teal-200 group-hover:text-teal-300">
                     <ArrowRight className="size-5" />
                   </span>
                 </div>
@@ -425,7 +425,7 @@ function ProblemSolutionSection() {
             </div>
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/12 shadow-lg">
             <Image
               src="/web-design-hp.jpeg"
               alt="Stunning website design example by Dewbwah Marketing"
@@ -453,14 +453,14 @@ function ServicesSection() {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-zinc-900/60 py-20 lg:py-28">
       <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-teal-200/30 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-1/4 h-96 w-96 rounded-full bg-cyan-200/20 blur-3xl" />
 
       <div className="container-padding relative mx-auto max-w-7xl">
         <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={stagger} className="text-center">
-          <motion.span variants={fadeInUp} className="inline-block rounded-full bg-teal-100 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">What We Do</motion.span>
-          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-900">Marketing That Actually Works</motion.h2>
+          <motion.span variants={fadeInUp} className="inline-block rounded-full bg-teal-500/15 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">What We Do</motion.span>
+          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-100">Marketing That Actually Works</motion.h2>
           <motion.p variants={fadeInUp} className="body-large mx-auto mt-4 max-w-2xl">No fluff, no jargon. Just proven systems that bring contractors more jobs.</motion.p>
         </motion.div>
 
@@ -509,13 +509,13 @@ function ServicesSection() {
           <div className="grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((service, index) => (
               <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
-                <Link href={service.href} className="group flex h-full flex-col bg-white p-6 transition-all hover:bg-teal-50">
+                <Link href={service.href} className="group flex h-full flex-col bg-zinc-950 p-6 transition-all hover:bg-teal-500/12">
                   <div className={`flex size-12 items-center justify-center rounded-xl bg-gradient-to-br ${service.color} shadow-md transition-transform group-hover:scale-105`}>
                     <service.icon className="size-6 text-white" />
                   </div>
-                  <h4 className="mt-4 text-lg font-bold text-slate-900 group-hover:text-teal-700">{service.title}</h4>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{service.description}</p>
-                  <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 transition-colors group-hover:text-teal-700">
+                  <h4 className="mt-4 text-lg font-bold text-slate-100 group-hover:text-teal-300">{service.title}</h4>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{service.description}</p>
+                  <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-300 transition-colors group-hover:text-teal-300">
                     Learn more
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -528,7 +528,7 @@ function ServicesSection() {
             <p className="text-sm font-medium text-slate-300 sm:text-base">
               Ready to see what we can do for <span className="text-white">your</span> business?
             </p>
-            <Button asChild size="sm" className="gap-2 bg-cyan-500 px-5 font-semibold text-slate-900 shadow-lg shadow-cyan-500/25 hover:bg-cyan-400">
+            <Button asChild size="sm" className="gap-2 bg-cyan-500 px-5 font-semibold text-slate-100 shadow-lg shadow-cyan-500/25 hover:bg-cyan-400">
               <Link href="/services">
                 View All Services
                 <ArrowRight className="size-4" />
@@ -566,17 +566,17 @@ function WhyUsSection() {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-zinc-950">
       <div className="container-padding mx-auto max-w-7xl">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <span className="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">Why Dewbwah</span>
-            <h2 className="heading-section mt-4 text-slate-900">Meet the Team That Gets It Done</h2>
+            <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">Why Dewbwah</span>
+            <h2 className="heading-section mt-4 text-slate-100">Meet the Team That Gets It Done</h2>
             <p className="body-large mt-6">
               <strong>Shelby Dewbwah</strong> is the face of Dewbwah Marketing and she has put together
               an incredible team of international talent that creates incredible work.
             </p>
-            <p className="mt-4 text-lg font-medium text-teal-700">
+            <p className="mt-4 text-lg font-medium text-teal-300">
               Meet our team on our{" "}
               <Link href="/about" className="underline decoration-teal-300 underline-offset-4 hover:text-teal-800">About</Link>{" "}
               page.
@@ -585,12 +585,12 @@ function WhyUsSection() {
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {reasons.map((reason, index) => (
                 <motion.div key={reason.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }} className="flex gap-4">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-teal-50">
-                    <reason.icon className="size-6 text-teal-600" />
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-teal-500/10">
+                    <reason.icon className="size-6 text-teal-300" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900">{reason.title}</h3>
-                    <p className="mt-1 text-sm text-slate-600">{reason.description}</p>
+                    <h3 className="font-semibold text-slate-100">{reason.title}</h3>
+                    <p className="mt-1 text-sm text-slate-400">{reason.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -598,8 +598,8 @@ function WhyUsSection() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
-            <div className="absolute -right-4 -top-4 h-72 w-72 rounded-full bg-teal-100 blur-3xl" />
-            <div className="relative aspect-square overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+            <div className="absolute -right-4 -top-4 h-72 w-72 rounded-full bg-teal-500/15 blur-3xl" />
+            <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/12 bg-zinc-950 shadow-sm">
               <Image
                 src="/Dewbwah-Marketing-HS.jpeg"
                 alt="Shelby and Angie, founders of Dewbwah Marketing"

@@ -129,7 +129,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="space-y-16">
             {SERVICES.map((service, index) => (
@@ -146,13 +146,13 @@ export default function ServicesPage() {
                     <service.icon className="size-8 text-white" />
                   </div>
 
-                  <h2 className="mt-6 text-3xl font-bold text-slate-900">{service.title}</h2>
-                  <p className="mt-4 text-lg text-slate-600">{service.description}</p>
+                  <h2 className="mt-6 text-3xl font-bold text-slate-100">{service.title}</h2>
+                  <p className="mt-4 text-lg text-slate-400">{service.description}</p>
 
                   <ul className="mt-8 space-y-3">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3 text-slate-700">
-                        <CheckCircle2 className="size-5 text-teal-600" />
+                      <li key={feature} className="flex items-center gap-3 text-slate-300">
+                        <CheckCircle2 className="size-5 text-teal-300" />
                         {feature}
                       </li>
                     ))}

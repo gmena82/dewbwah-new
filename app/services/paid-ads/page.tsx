@@ -128,13 +128,13 @@ export default function PaidAdsPage() {
       </section>
 
       {/* Results */}
-      <section className="border-b border-slate-100 bg-white py-12">
+      <section className="border-b border-white/10 bg-zinc-950 py-12">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {RESULTS.map((result) => (
               <div key={result.label} className="text-center">
-                <div className="text-4xl font-bold text-teal-600">{result.metric}</div>
-                <div className="mt-1 text-sm text-slate-600">{result.label}</div>
+                <div className="text-4xl font-bold text-teal-300">{result.metric}</div>
+                <div className="mt-1 text-sm text-slate-400">{result.label}</div>
               </div>
             ))}
           </div>
@@ -142,10 +142,10 @@ export default function PaidAdsPage() {
       </section>
 
       {/* Features */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-zinc-900/60">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="heading-section text-slate-900">How We Do It</h2>
+            <h2 className="heading-section text-slate-100">How We Do It</h2>
             <p className="body-large mx-auto mt-4 max-w-2xl">
               No cookie-cutter campaigns. Every strategy is built specifically for contractors 
               and your local market.
@@ -156,14 +156,14 @@ export default function PaidAdsPage() {
             {FEATURES.map((feature) => (
               <div
                 key={feature.title}
-                className="flex gap-6 rounded-3xl border border-slate-100 bg-white p-8 shadow-sm"
+                className="flex gap-6 rounded-3xl border border-white/10 bg-zinc-950 p-8 shadow-sm"
               >
                 <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 shadow-lg">
                   <feature.icon className="size-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
-                  <p className="mt-2 text-slate-600">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-slate-100">{feature.title}</h3>
+                  <p className="mt-2 text-slate-400">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -172,11 +172,11 @@ export default function PaidAdsPage() {
       </section>
 
       {/* What's Included */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="heading-section text-slate-900">What&apos;s Included</h2>
+              <h2 className="heading-section text-slate-100">What&apos;s Included</h2>
               <p className="body-large mt-4">
                 Everything you need to run profitable ad campaigns, without the hassle.
               </p>
@@ -192,8 +192,8 @@ export default function PaidAdsPage() {
                   "Monthly strategy calls",
                   "Dedicated account manager",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="size-5 text-teal-600" />
+                  <li key={item} className="flex items-center gap-3 text-slate-300">
+                    <CheckCircle2 className="size-5 text-teal-300" />
                     {item}
                   </li>
                 ))}

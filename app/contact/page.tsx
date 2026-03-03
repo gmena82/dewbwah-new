@@ -97,12 +97,12 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2">
             {/* Contact Info */}
             <div>
-              <h2 className="heading-section text-slate-900">Get in Touch</h2>
+              <h2 className="heading-section text-slate-100">Get in Touch</h2>
               <p className="body-large mt-4">
                 We respond to every inquiry within 24 hours. Actually. Not like those 
                 other agencies that ghost you.
@@ -110,23 +110,23 @@ export default function ContactPage() {
 
               <div className="mt-8 space-y-6">
                 {CONTACT_ITEMS.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:border-teal-100 hover:bg-teal-50/50">
-                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 shadow-sm">
-                      <item.icon className="size-6 text-teal-600" />
+                  <div key={item.label} className="flex items-start gap-4 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:border-teal-100 hover:bg-teal-500/12">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-teal-500/10 shadow-sm">
+                      <item.icon className="size-6 text-teal-300" />
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-slate-500">{item.label}</div>
+                      <div className="text-sm font-medium text-slate-400">{item.label}</div>
                       {item.href ? (
                         <a
                           href={item.href}
                           target={item.href.startsWith("http") ? "_blank" : undefined}
                           rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                          className="text-lg font-semibold text-slate-900 transition-colors hover:text-teal-600"
+                          className="text-lg font-semibold text-slate-100 transition-colors hover:text-teal-300"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <div className="text-lg font-semibold text-slate-900">{item.value}</div>
+                        <div className="text-lg font-semibold text-slate-100">{item.value}</div>
                       )}
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
 
               {/* Map Placeholder */}
               <div className="mt-12">
-                <div className="aspect-video overflow-hidden rounded-3xl border border-slate-100 bg-slate-100">
+                <div className="aspect-video overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/75">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198729.54063941!2d-94.78315!3d39.0997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1b52ae2c7e7%3A0xf3e2f7e1d6f7d2e8!2sKansas%20City%2C%20MO!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
                     width="100%"
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     title="Dewbwah Marketing Location"
                   />
                 </div>
-                <p className="mt-3 text-center text-sm text-slate-500">
+                <p className="mt-3 text-center text-sm text-slate-400">
                   Serving contractors throughout Kansas City and the Midwest
                 </p>
               </div>
@@ -155,11 +155,11 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              <div className="rounded-3xl border border-slate-100 bg-slate-50 p-8">
-                <h3 className="text-2xl font-bold text-slate-900">
+              <div className="rounded-3xl border border-white/10 bg-zinc-900/60 p-8">
+                <h3 className="text-2xl font-bold text-slate-100">
                   Book Your Free Strategy Call
                 </h3>
-                <p className="mt-2 text-slate-600">
+                <p className="mt-2 text-slate-400">
                   Fill out the form below and we&apos;ll reach out within 24 hours to schedule 
                   a call.
                 </p>

@@ -139,42 +139,42 @@ export default function WorkPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="border-b border-slate-100 bg-white py-12">
+      <section className="border-b border-white/10 bg-zinc-950 py-12">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
               <div className="flex items-center justify-center gap-2">
-                <Users className="size-6 text-teal-600" />
-                <span className="text-3xl font-bold text-slate-900">60+</span>
+                <Users className="size-6 text-teal-300" />
+                <span className="text-3xl font-bold text-slate-100">60+</span>
               </div>
-              <div className="mt-1 text-sm text-slate-600">Contractors Served</div>
+              <div className="mt-1 text-sm text-slate-400">Contractors Served</div>
             </div>
             <div>
               <div className="flex items-center justify-center gap-2">
-                <TrendingUp className="size-6 text-teal-600" />
-                <span className="text-3xl font-bold text-slate-900">300%</span>
+                <TrendingUp className="size-6 text-teal-300" />
+                <span className="text-3xl font-bold text-slate-100">300%</span>
               </div>
-              <div className="mt-1 text-sm text-slate-600">Avg. Lead Increase</div>
+              <div className="mt-1 text-sm text-slate-400">Avg. Lead Increase</div>
             </div>
             <div>
               <div className="flex items-center justify-center gap-2">
-                <DollarSign className="size-6 text-teal-600" />
-                <span className="text-3xl font-bold text-slate-900">$5M+</span>
+                <DollarSign className="size-6 text-teal-300" />
+                <span className="text-3xl font-bold text-slate-100">$5M+</span>
               </div>
-              <div className="mt-1 text-sm text-slate-600">Revenue Generated</div>
+              <div className="mt-1 text-sm text-slate-400">Revenue Generated</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Studies Grid */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-zinc-900/60">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {CASE_STUDIES.map((study) => (
               <div
                 key={study.client}
-                className="group rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition-all hover:shadow-xl"
+                className="group rounded-3xl border border-white/10 bg-zinc-950 p-6 shadow-sm transition-all hover:shadow-xl"
               >
                 <div className="relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 via-teal-700 to-slate-900">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -188,26 +188,26 @@ export default function WorkPage() {
                     {study.services.map((service) => (
                       <span
                         key={service}
-                        className="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700"
+                        className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-semibold text-teal-300"
                       >
                         {service}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="mt-4 text-xl font-bold text-slate-900">{study.client}</h3>
-                  <p className="text-sm text-slate-500">{study.industry}</p>
+                  <h3 className="mt-4 text-xl font-bold text-slate-100">{study.client}</h3>
+                  <p className="text-sm text-slate-400">{study.industry}</p>
 
                   <div className="mt-4 grid grid-cols-3 gap-2">
                     {study.results.map((result) => (
                       <div key={result.label} className="text-center">
-                        <div className="text-lg font-bold text-teal-600">{result.metric}</div>
-                        <div className="text-xs text-slate-500">{result.label}</div>
+                        <div className="text-lg font-bold text-teal-300">{result.metric}</div>
+                        <div className="text-xs text-slate-400">{result.label}</div>
                       </div>
                     ))}
                   </div>
 
-                  <blockquote className="mt-4 border-l-2 border-teal-200 pl-4 text-sm italic text-slate-600">
+                  <blockquote className="mt-4 border-l-2 border-teal-200 pl-4 text-sm italic text-slate-400">
                     &quot;{study.testimonial}&quot;
                   </blockquote>
                 </div>

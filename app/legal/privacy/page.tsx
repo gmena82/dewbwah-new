@@ -10,10 +10,10 @@ export const metadata: Metadata = buildMetadata({
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="section-padding bg-white">
+    <div className="section-padding bg-zinc-950">
       <div className="container-padding mx-auto max-w-4xl">
-        <h1 className="heading-display text-slate-900">Privacy Policy</h1>
-        <p className="mt-4 text-slate-500">Last updated: January 2026</p>
+        <h1 className="heading-display text-slate-100">Privacy Policy</h1>
+        <p className="mt-4 text-slate-400">Last updated: January 2026</p>
 
         <div className="prose prose-slate mt-12 max-w-none">
           <h2>Introduction</h2>

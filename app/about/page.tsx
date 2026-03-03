@@ -121,23 +121,23 @@ export default function AboutPage() {
       </section>
 
       {/* The Duo Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <div>
-              <span className="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">
+              <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">
                 Meet The Team
               </span>
-              <h2 className="heading-section mt-4 text-slate-900">
+              <h2 className="heading-section mt-4 text-slate-100">
                 The Duo That Gets Sh*t Done
               </h2>
 
               <div className="mt-8 space-y-8">
-                <div className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
-                  <h3 className="text-xl font-bold text-slate-900">
+                <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
+                  <h3 className="text-xl font-bold text-slate-100">
                     Shelby — Brand & Strategy
                   </h3>
-                  <p className="mt-3 text-slate-600">
+                  <p className="mt-3 text-slate-400">
                     Shelby is the creative force behind every campaign. She knows how to make
                     contractors stand out in crowded markets and turn browsers into buyers.
                     With a background in brand strategy and a no-BS attitude, she cuts through
@@ -145,11 +145,11 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
-                  <h3 className="text-xl font-bold text-slate-900">
+                <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
+                  <h3 className="text-xl font-bold text-slate-100">
                     Angie — Operations & Numbers
                   </h3>
-                  <p className="mt-3 text-slate-600">
+                  <p className="mt-3 text-slate-400">
                     Angie keeps the machine running. She&apos;s obsessed with ROI and makes sure
                     every dollar you spend works harder than the last. From tracking leads to
                     optimizing campaigns, she&apos;s the reason our clients see real, measurable
@@ -160,7 +160,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -right-8 -top-8 h-64 w-64 rounded-full bg-teal-100 blur-3xl" />
+              <div className="absolute -right-8 -top-8 h-64 w-64 rounded-full bg-teal-500/15 blur-3xl" />
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
                 <Image
                   src="/Dewbwah-Marketing-HS.jpeg"
@@ -176,13 +176,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-zinc-900/60">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-teal-100 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">
+            <span className="inline-block rounded-full bg-teal-500/15 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">
               Our Values
             </span>
-            <h2 className="heading-section mt-4 text-slate-900">
+            <h2 className="heading-section mt-4 text-slate-100">
               What We Stand For
             </h2>
             <p className="body-large mx-auto mt-4 max-w-2xl">
@@ -195,14 +195,14 @@ export default function AboutPage() {
             {VALUES.map((value) => (
               <div
                 key={value.title}
-                className="flex gap-6 rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="flex gap-6 rounded-3xl border border-white/10 bg-zinc-950 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 shadow-lg">
                   <value.icon className="size-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{value.title}</h3>
-                  <p className="mt-2 text-slate-600">{value.description}</p>
+                  <h3 className="text-xl font-bold text-slate-100">{value.title}</h3>
+                  <p className="mt-2 text-slate-400">{value.description}</p>
                 </div>
               </div>
             ))}
@@ -211,13 +211,13 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-4xl">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">
+            <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">
               Our Journey
             </span>
-            <h2 className="heading-section mt-4 text-slate-900">
+            <h2 className="heading-section mt-4 text-slate-100">
               From Side Hustle to Full Agency
             </h2>
           </div>
@@ -232,16 +232,16 @@ export default function AboutPage() {
                   className={`relative flex gap-8 md:gap-16 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                 >
-                  <div className="absolute left-6 top-0 z-10 flex size-5 items-center justify-center rounded-full border-4 border-white bg-teal-500 md:left-1/2 md:-translate-x-1/2" />
+                  <div className="absolute left-6 top-0 z-10 flex size-5 items-center justify-center rounded-full border-4 border-white bg-teal-500/100 md:left-1/2 md:-translate-x-1/2" />
                   <div
-                    className={`ml-16 flex-1 rounded-2xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:bg-teal-50/50 hover:shadow-md md:ml-0 ${index % 2 === 0 ? "md:text-right" : ""
+                    className={`ml-16 flex-1 rounded-2xl border border-white/10 bg-zinc-900/60 p-6 transition-all duration-300 hover:bg-teal-500/12 hover:shadow-md md:ml-0 ${index % 2 === 0 ? "md:text-right" : ""
                       }`}
                   >
-                    <span className="inline-block rounded-full bg-teal-100 px-3 py-1 text-sm font-bold text-teal-700">
+                    <span className="inline-block rounded-full bg-teal-500/15 px-3 py-1 text-sm font-bold text-teal-300">
                       {item.year}
                     </span>
-                    <h3 className="mt-3 text-xl font-bold text-slate-900">{item.title}</h3>
-                    <p className="mt-2 text-slate-600">{item.description}</p>
+                    <h3 className="mt-3 text-xl font-bold text-slate-100">{item.title}</h3>
+                    <p className="mt-2 text-slate-400">{item.description}</p>
                   </div>
                 </div>
               ))}

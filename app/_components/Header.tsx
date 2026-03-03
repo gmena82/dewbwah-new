@@ -112,7 +112,7 @@ export function Header() {
                               >
                                 <span className="font-medium">{service.label}</span>
                                 {service.description && (
-                                  <p className="mt-0.5 text-xs text-slate-500">{service.description}</p>
+                                  <p className="mt-0.5 text-xs text-slate-400">{service.description}</p>
                                 )}
                               </Link>
                             ))}

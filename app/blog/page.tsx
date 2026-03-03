@@ -99,10 +99,10 @@ export default function BlogPage() {
       {/* Coming Soon Banner */}
       <section className="border-b border-teal-100 bg-gradient-to-r from-teal-50 via-white to-teal-50 py-6">
         <div className="container-padding mx-auto max-w-7xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full bg-teal-100/60 px-6 py-3">
+          <div className="inline-flex items-center gap-3 rounded-full bg-teal-500/15/60 px-6 py-3">
             <span className="relative flex size-3">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal-500 opacity-75" />
-              <span className="relative inline-flex size-3 rounded-full bg-teal-500" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal-500/100 opacity-75" />
+              <span className="relative inline-flex size-3 rounded-full bg-teal-500/100" />
             </span>
             <span className="text-sm font-semibold text-teal-800">
               Future blog posts here. Stay tuned for contractor marketing insights.
@@ -112,13 +112,13 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Cards */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <span className="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-700">
+            <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">
               Coming Soon
             </span>
-            <h2 className="heading-section mt-4 text-slate-900">
+            <h2 className="heading-section mt-4 text-slate-100">
               What We&apos;re Working On
             </h2>
             <p className="body-large mx-auto mt-4 max-w-2xl">
@@ -131,7 +131,7 @@ export default function BlogPage() {
             {UPCOMING_POSTS.map((post) => (
               <article
                 key={post.title}
-                className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* Placeholder Image Area */}
                 <div className={`relative flex aspect-[16/10] items-center justify-center bg-gradient-to-br ${post.color}`}>
@@ -147,7 +147,7 @@ export default function BlogPage() {
                 {/* Content */}
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center gap-3">
-                    <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700">
+                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-semibold text-teal-300">
                       {post.category}
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs text-slate-400">
@@ -156,15 +156,15 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-xl font-bold text-slate-900 transition-colors group-hover:text-teal-700">
+                  <h3 className="mt-4 text-xl font-bold text-slate-100 transition-colors group-hover:text-teal-300">
                     {post.title}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">
                     {post.excerpt}
                   </p>
 
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-600 transition-colors group-hover:text-teal-700">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-300 transition-colors group-hover:text-teal-300">
                     Coming Soon
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </div>

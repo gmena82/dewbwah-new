@@ -95,7 +95,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 bg-black/35">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-slate-400 sm:flex-row sm:px-6 lg:px-8">
           <p>&copy; {currentYear} Dewbwah Marketing. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal/privacy" className="transition-colors hover:text-teal-300">
