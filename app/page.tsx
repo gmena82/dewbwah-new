@@ -225,7 +225,7 @@ function HeroSection() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 100" className="w-full fill-white">
+        <svg viewBox="0 0 1440 100" className="w-full fill-black">
           <path d="M0,60 C360,115 720,5 1440,60 L1440,100 L0,100 Z" />
         </svg>
       </div>
@@ -615,4 +615,3 @@ function WhyUsSection() {
     </section>
   )
 }
-

@@ -44,11 +44,11 @@ export function Header() {
       }`}
     >
       <div className="hidden border-b border-white/10 bg-zinc-950/85 md:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs tracking-wide">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2.5 text-xs tracking-wide">
           <p className="text-slate-400">
             Dewbwah Marketing: Contractor Growth Systems, No-Fluff Execution.
           </p>
-          <div className="flex items-center gap-5 text-slate-400">
+          <div className="flex items-center gap-5 text-white">
             <a href={contactInfo.phoneHref} className="inline-flex items-center gap-2 transition-colors hover:text-teal-300">
               <Phone className="size-3.5" />
               <span>{contactInfo.phone}</span>
@@ -61,10 +61,10 @@ export function Header() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-teal-300/20 bg-black/60 p-1 shadow-lg shadow-teal-900/20" priority />
-          <span className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">Dewbwah</span>
+          <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={48} height={48} className="size-12 rounded-xl border border-teal-300/20 bg-black/60 p-1 shadow-lg shadow-teal-900/20" priority />
+          <span className="text-2xl font-extrabold tracking-tight text-white sm:text-[1.7rem]">Dewbwah</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -158,7 +158,7 @@ export function Header() {
               <div className="flex h-full flex-col">
                 <div className="flex items-center justify-between border-b border-white/10 p-4">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-                    <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-teal-300/20 bg-black/60 p-1" priority />
+                    <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={46} height={46} className="size-11 rounded-xl border border-teal-300/20 bg-black/60 p-1" priority />
                     <span className="text-xl font-bold text-white">Dewbwah</span>
                   </Link>
                 </div>
