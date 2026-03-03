@@ -31,7 +31,7 @@ export function FAQ({
           viewport={{ once: true }}
           className="text-center"
         >
-          <span className="inline-block rounded-full border border-violet-300/30 bg-violet-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-violet-200">
+          <span className="inline-block rounded-full border border-teal-300/30 bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-200">
             FAQ
           </span>
           <h2 className="heading-section mt-4 text-white">{title}</h2>
@@ -52,9 +52,9 @@ export function FAQ({
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="rounded-2xl border border-violet-300/15 bg-zinc-900/70 px-6 shadow-lg"
+                className="rounded-2xl border border-teal-300/15 bg-zinc-900/70 px-6 shadow-lg"
               >
-                <AccordionTrigger className="py-6 text-left text-lg font-semibold text-slate-100 hover:text-violet-200 hover:no-underline">
+                <AccordionTrigger className="py-6 text-left text-lg font-semibold text-slate-100 hover:text-teal-200 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 text-slate-400">

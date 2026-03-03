@@ -70,8 +70,8 @@ export function ContactForm({
   const inputStyles = cn(
     "w-full rounded-xl border px-4 py-3 text-sm shadow-sm transition focus:outline-none focus:ring-2",
     isDark
-      ? "border-violet-300/20 bg-black/55 text-white placeholder:text-slate-500 focus:border-violet-300 focus:ring-violet-300/30"
-      : "border-slate-300 bg-zinc-950/35 text-slate-100 placeholder:text-slate-500 focus:border-violet-300 focus:ring-violet-300/30"
+      ? "border-teal-300/20 bg-black/55 text-white placeholder:text-slate-500 focus:border-teal-300 focus:ring-teal-300/30"
+      : "border-slate-300 bg-zinc-950/35 text-slate-100 placeholder:text-slate-500 focus:border-teal-300 focus:ring-teal-300/30"
   )
 
   const labelStyles = cn(
@@ -85,8 +85,8 @@ export function ContactForm({
       className={cn(
         "space-y-5 rounded-2xl p-6 shadow-xl",
         isDark
-          ? "border border-violet-300/20 bg-zinc-950/65 backdrop-blur-sm shadow-[0_0_30px_rgba(167,139,250,0.25),0_0_60px_rgba(167,139,250,0.12)]"
-          : "border border-violet-300/20 bg-zinc-900/75",
+          ? "border border-teal-300/20 bg-zinc-950/65 backdrop-blur-sm shadow-[0_0_30px_rgba(167,139,250,0.25),0_0_60px_rgba(167,139,250,0.12)]"
+          : "border border-teal-300/20 bg-zinc-900/75",
         className
       )}
     >
@@ -207,7 +207,7 @@ export function ContactForm({
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full gap-2 bg-gradient-to-r from-violet-500 to-violet-600 py-6 text-base font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:from-violet-400 hover:to-violet-500 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+          className="w-full gap-2 bg-gradient-to-r from-teal-500 to-teal-600 py-6 text-base font-semibold text-white shadow-lg shadow-teal-500/25 transition-all hover:from-teal-400 hover:to-teal-500 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? (
             <>
@@ -223,7 +223,7 @@ export function ContactForm({
         </Button>
 
         {status === "success" && (
-          <p className="text-center text-sm font-medium text-violet-300">
+          <p className="text-center text-sm font-medium text-teal-300">
             Thanks! We&apos;ll be in touch within 24 hours.
           </p>
         )}

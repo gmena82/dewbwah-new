@@ -18,7 +18,7 @@ export function CTASection() {
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/70" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-950/45 to-violet-950/50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-950/45 to-teal-950/50" />
 
       <div className="container-padding relative mx-auto max-w-7xl">
         <div className="grid gap-10 rounded-3xl border border-white/12 bg-black/35 p-6 backdrop-blur-md lg:grid-cols-2 lg:items-center lg:p-8">
@@ -28,7 +28,7 @@ export function CTASection() {
             viewport={{ once: true }}
             className="text-center lg:text-left"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet-300/30 bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-200">
+            <span className="inline-flex items-center gap-2 rounded-full border border-teal-300/30 bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-200">
               Secure Intake
             </span>
             <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -44,7 +44,7 @@ export function CTASection() {
                 "No pressure, no obligation",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-slate-200">
-                  <CheckCircle2 className="size-5 text-violet-300" />
+                  <CheckCircle2 className="size-5 text-teal-300" />
                   <span>{item}</span>
                 </div>
               ))}

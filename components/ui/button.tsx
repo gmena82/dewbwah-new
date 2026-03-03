@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "relative isolate overflow-hidden border border-violet-300/30 bg-gradient-to-br from-zinc-900 to-zinc-950 text-primary-foreground shadow-lg shadow-violet-900/30 hover:border-violet-300/70 hover:shadow-violet-500/25 before:absolute before:inset-[-2px] before:rounded-md before:bg-[conic-gradient(from_var(--btn-angle,0deg),transparent_0%,transparent_25%,#a78bfa_40%,#ffffff_50%,#a78bfa_60%,transparent_75%,transparent_100%)] before:[animation:btn-rotate_3s_linear_infinite] before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100",
+          "relative isolate overflow-hidden border border-teal-300/30 bg-gradient-to-br from-zinc-900 to-zinc-950 text-primary-foreground shadow-lg shadow-teal-900/30 hover:border-teal-300/70 hover:shadow-teal-500/25 before:absolute before:inset-[-2px] before:rounded-md before:bg-[conic-gradient(from_var(--btn-angle,0deg),transparent_0%,transparent_25%,#2dd4bf_40%,#ffffff_50%,#2dd4bf_60%,transparent_75%,transparent_100%)] before:[animation:btn-rotate_3s_linear_infinite] before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "border border-violet-300/25 bg-black/35 text-slate-200 shadow-xs hover:border-violet-300/60 hover:bg-violet-500/10 hover:text-white",
+          "border border-teal-300/25 bg-black/35 text-slate-200 shadow-xs hover:border-teal-300/60 hover:bg-teal-500/10 hover:text-white",
         secondary:
           "border border-white/10 bg-secondary text-secondary-foreground hover:bg-zinc-800",
         ghost:

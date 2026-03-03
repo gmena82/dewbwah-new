@@ -39,7 +39,7 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         hasShadow
-          ? "border-b border-violet-300/20 bg-black/80 shadow-2xl backdrop-blur-xl"
+          ? "border-b border-teal-300/20 bg-black/80 shadow-2xl backdrop-blur-xl"
           : "border-b border-white/10 bg-black/65 backdrop-blur-lg"
       }`}
     >
@@ -49,11 +49,11 @@ export function Header() {
             Dewbwah Marketing: Contractor Growth Systems, No-Fluff Execution.
           </p>
           <div className="flex items-center gap-5 text-slate-400">
-            <a href={contactInfo.phoneHref} className="inline-flex items-center gap-2 transition-colors hover:text-violet-300">
+            <a href={contactInfo.phoneHref} className="inline-flex items-center gap-2 transition-colors hover:text-teal-300">
               <Phone className="size-3.5" />
               <span>{contactInfo.phone}</span>
             </a>
-            <a href={contactInfo.emailHref} className="inline-flex items-center gap-2 transition-colors hover:text-violet-300">
+            <a href={contactInfo.emailHref} className="inline-flex items-center gap-2 transition-colors hover:text-teal-300">
               <Mail className="size-3.5" />
               <span>{contactInfo.email}</span>
             </a>
@@ -63,7 +63,7 @@ export function Header() {
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-violet-300/20 bg-black/60 p-1 shadow-lg shadow-violet-900/20" priority />
+          <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-teal-300/20 bg-black/60 p-1 shadow-lg shadow-teal-900/20" priority />
           <span className="text-xl font-extrabold tracking-tight text-white sm:text-2xl">Dewbwah</span>
         </Link>
 
@@ -81,8 +81,8 @@ export function Header() {
                     href={item.href}
                     className={`inline-flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
                       servicesActive
-                        ? "bg-violet-500/15 text-violet-200"
-                        : "text-slate-300 hover:bg-white/8 hover:text-violet-200"
+                        ? "bg-teal-500/15 text-teal-200"
+                        : "text-slate-300 hover:bg-white/8 hover:text-teal-200"
                     }`}
                   >
                     {item.label}
@@ -98,7 +98,7 @@ export function Header() {
                         transition={{ duration: 0.15 }}
                         className="absolute left-1/2 top-full z-50 min-w-[300px] -translate-x-1/2 pt-2"
                       >
-                        <div className="rounded-2xl border border-violet-300/20 bg-zinc-950/95 p-3 shadow-2xl backdrop-blur-xl">
+                        <div className="rounded-2xl border border-teal-300/20 bg-zinc-950/95 p-3 shadow-2xl backdrop-blur-xl">
                           <div className="space-y-1">
                             {serviceNav.map((service) => (
                               <Link
@@ -106,7 +106,7 @@ export function Header() {
                                 href={service.href}
                                 className={`block rounded-xl px-4 py-3 transition-colors ${
                                   isLinkActive(service.href)
-                                    ? "bg-violet-500/14 text-violet-200"
+                                    ? "bg-teal-500/14 text-teal-200"
                                     : "text-slate-300 hover:bg-white/5"
                                 }`}
                               >
@@ -131,8 +131,8 @@ export function Header() {
                 href={item.href}
                 className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
                   isLinkActive(item.href)
-                    ? "bg-violet-500/15 text-violet-200"
-                    : "text-slate-300 hover:bg-white/8 hover:text-violet-200"
+                    ? "bg-teal-500/15 text-teal-200"
+                    : "text-slate-300 hover:bg-white/8 hover:text-teal-200"
                 }`}
               >
                 {item.label}
@@ -158,7 +158,7 @@ export function Header() {
               <div className="flex h-full flex-col">
                 <div className="flex items-center justify-between border-b border-white/10 p-4">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-                    <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-violet-300/20 bg-black/60 p-1" priority />
+                    <Image src="/new-logo-png.png" alt="Dewbwah Marketing" width={40} height={40} className="size-10 rounded-xl border border-teal-300/20 bg-black/60 p-1" priority />
                     <span className="text-xl font-bold text-white">Dewbwah</span>
                   </Link>
                 </div>
@@ -173,7 +173,7 @@ export function Header() {
                               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                               className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left font-medium transition-colors ${
                                 servicesActive
-                                  ? "bg-violet-500/15 text-violet-200"
+                                  ? "bg-teal-500/15 text-teal-200"
                                   : "text-slate-300 hover:bg-white/6"
                               }`}
                             >
@@ -196,7 +196,7 @@ export function Header() {
                                         onClick={() => setMobileOpen(false)}
                                         className={`block rounded-lg px-4 py-2.5 text-sm transition-colors ${
                                           isLinkActive(service.href)
-                                            ? "bg-violet-500/14 text-violet-200"
+                                            ? "bg-teal-500/14 text-teal-200"
                                             : "text-slate-400 hover:bg-white/6"
                                         }`}
                                       >
@@ -218,7 +218,7 @@ export function Header() {
                           onClick={() => setMobileOpen(false)}
                           className={`block rounded-xl px-4 py-3 font-medium transition-colors ${
                             isLinkActive(item.href)
-                              ? "bg-violet-500/15 text-violet-200"
+                              ? "bg-teal-500/15 text-teal-200"
                               : "text-slate-300 hover:bg-white/6"
                           }`}
                         >
@@ -236,11 +236,11 @@ export function Header() {
                     </Link>
                   </Button>
                   <div className="mt-4 space-y-2 text-sm text-slate-400">
-                    <a href={contactInfo.phoneHref} className="flex items-center gap-2 hover:text-violet-200">
+                    <a href={contactInfo.phoneHref} className="flex items-center gap-2 hover:text-teal-200">
                       <Phone className="size-4" />
                       {contactInfo.phone}
                     </a>
-                    <a href={contactInfo.emailHref} className="flex items-center gap-2 hover:text-violet-200">
+                    <a href={contactInfo.emailHref} className="flex items-center gap-2 hover:text-teal-200">
                       <Mail className="size-4" />
                       {contactInfo.email}
                     </a>
