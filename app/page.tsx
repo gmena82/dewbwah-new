@@ -292,9 +292,9 @@ function ProblemSolutionSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl border-2 border-red-100 bg-red-50/50 p-8"
+            className="rounded-3xl border-2 border-red-200 bg-white p-8 shadow-lg shadow-black/20"
           >
-            <h3 className="text-xl font-bold text-red-700">What You&apos;re Tired Of:</h3>
+            <h3 className="text-xl font-bold text-red-800">What You&apos;re Tired Of:</h3>
             <ul className="mt-6 space-y-4">
               {PROBLEMS.map((problem, index) => (
                 <motion.li
@@ -305,10 +305,10 @@ function ProblemSolutionSection() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <span className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
+                  <span className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-700">
                     ✕
                   </span>
-                  <span className="text-slate-300">{problem}</span>
+                  <span className="text-slate-700">{problem}</span>
                 </motion.li>
               ))}
             </ul>
