@@ -150,7 +150,7 @@ function HeroSection() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/videos/Hero-Video-2-HB.mp4" type="video/mp4" />
+        <source src="/videos/Hero.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-slate-950/60" />
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/20 to-teal-950/40" />
@@ -601,7 +601,7 @@ function WhyUsSection() {
             <div className="absolute -right-4 -top-4 h-72 w-72 rounded-full bg-teal-500/15 blur-3xl" />
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/12 bg-zinc-950 shadow-sm">
               <Image
-                src="/Dewbwah-Marketing-HS.jpeg"
+                src="/main.webp"
                 alt="Shelby and Angie, founders of Dewbwah Marketing"
                 fill
                 className="object-cover"

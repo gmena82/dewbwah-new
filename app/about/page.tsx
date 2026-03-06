@@ -163,7 +163,7 @@ export default function AboutPage() {
               <div className="absolute -right-8 -top-8 h-64 w-64 rounded-full bg-teal-500/15 blur-3xl" />
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
                 <Image
-                  src="/Dewbwah-Marketing-HS.jpeg"
+                  src="/about-2.webp"
                   alt="Shelby and Angie, founders of Dewbwah Marketing"
                   fill
                   className="object-cover"

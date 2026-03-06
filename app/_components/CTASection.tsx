@@ -9,24 +9,26 @@ import { ContactForm } from "./ContactForm"
 export function CTASection() {
   return (
     <section className="relative overflow-hidden py-24">
-      <Image
-        src="/CTA-BG.jpeg"
-        alt=""
-        fill
-        className="object-cover"
-        sizes="100vw"
-        aria-hidden="true"
-      />
       <div className="absolute inset-0 bg-black/70" />
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-950/45 to-teal-950/50" />
 
       <div className="container-padding relative mx-auto max-w-7xl">
-        <div className="grid gap-10 rounded-3xl border border-white/12 bg-black/35 p-6 backdrop-blur-md lg:grid-cols-2 lg:items-center lg:p-8">
+        <div className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/12 p-6 backdrop-blur-md lg:grid-cols-2 lg:items-center lg:p-8">
+          <Image
+            src="/bg-skyline.webp"
+            alt=""
+            fill
+            className="object-cover grayscale"
+            sizes="(min-width: 1024px) 1200px, 100vw"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-zinc-950/35 to-teal-950/50" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center lg:text-left"
+            className="relative z-10 text-center lg:text-left"
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-300/30 bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-200">
               Secure Intake
@@ -56,8 +58,13 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            className="relative z-10"
           >
-            <ContactForm variant="dark" subject="Dewbwah - Website CTA" />
+            <ContactForm
+              variant="dark"
+              subject="Dewbwah - Website CTA"
+              className="!bg-zinc-950/45 !border-white/18"
+            />
           </motion.div>
         </div>
       </div>
