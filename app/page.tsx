@@ -233,7 +233,7 @@ function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="animate-cta-pulse gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-6 text-lg font-semibold text-white shadow-xl shadow-teal-500/30 transition-all hover:from-teal-400 hover:to-cyan-400 hover:shadow-2xl"
+            className="gap-2 px-8 py-6 text-base"
           >
             <Link href="/contact">
               <Phone className="size-5" />
@@ -244,7 +244,7 @@ function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="gap-2 border-2 border-slate-500 bg-transparent px-8 py-6 text-lg font-semibold text-white hover:border-teal-400 hover:bg-teal-500/10"
+            className="gap-2 px-8 py-6 text-base"
           >
             <Link href="/work">
               See Our Work
@@ -414,14 +414,14 @@ function ProblemSolutionSection() {
               </p>
 
               <div className="mt-8">
-                <Button asChild className="bg-teal-600 text-white hover:bg-teal-700">
+                <Button asChild>
                   <Link href="/services/web-design">Learn More</Link>
                 </Button>
               </div>
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="card-accent-line group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-teal-300/28 hover:shadow-lg hover:shadow-teal-500/10">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-teal-600 to-cyan-500" />
                 <h4 className="text-2xl font-extrabold tracking-tight text-slate-100">Custom</h4>
                 <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-300">Designed Websites</p>
@@ -437,7 +437,7 @@ function ProblemSolutionSection() {
                 </div>
               </div>
 
-              <div className="group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="card-accent-line group relative overflow-hidden rounded-2xl border border-white/12 bg-zinc-950 p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-teal-300/28 hover:shadow-lg hover:shadow-teal-500/10">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500" />
                 <h4 className="text-2xl font-extrabold tracking-tight text-slate-100">Frequent</h4>
                 <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal-300">Website Updates</p>
@@ -539,7 +539,7 @@ function ServicesSection() {
           <div className="grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((service, index) => (
               <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
-                <Link href={service.href} className="group flex h-full flex-col rounded-md border border-transparent bg-zinc-950 p-6 transition-all hover:border-teal-300/35 hover:bg-zinc-950 hover:shadow-[inset_0_0_0_1px_rgba(27,190,211,0.22),0_0_32px_rgba(27,190,211,0.28)]">
+                <Link href={service.href} className="card-accent-line group flex h-full flex-col rounded-md border border-transparent bg-zinc-950 p-6 transition-all hover:border-teal-300/35 hover:bg-zinc-950 hover:shadow-[inset_0_0_0_1px_rgba(27,190,211,0.22),0_0_32px_rgba(27,190,211,0.28)]">
                   <div className={`flex size-12 items-center justify-center rounded-xl bg-gradient-to-br ${service.color} shadow-md transition-transform group-hover:scale-105`}>
                     <service.icon className="size-6 text-white" />
                   </div>
@@ -558,7 +558,7 @@ function ServicesSection() {
             <p className="text-sm font-medium text-slate-300 sm:text-base">
               Ready to see what we can do for <span className="text-white">your</span> business?
             </p>
-            <Button asChild size="sm" className="gap-2 bg-cyan-500 px-5 font-semibold text-slate-100 shadow-lg shadow-cyan-500/25 hover:bg-cyan-400">
+            <Button asChild size="sm" className="gap-2">
               <Link href="/services">
                 View All Services
                 <ArrowRight className="size-4" />

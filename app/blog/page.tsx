@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Clock, Calendar } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { buildMetadata, createFaqJsonLd, absoluteUrl, type FaqItem } from "@/app/_lib/seo"
 import { CTASection } from "@/app/_components/CTASection"
 import { FAQ } from "@/app/_components/FAQ"
@@ -97,14 +96,14 @@ export default function BlogPage() {
       </section>
 
       {/* Coming Soon Banner */}
-      <section className="border-b border-teal-100 bg-gradient-to-r from-teal-50 via-white to-teal-50 py-6">
+      <section className="border-b border-white/10 bg-zinc-950 py-6">
         <div className="container-padding mx-auto max-w-7xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full bg-teal-500/15/60 px-6 py-3">
+          <div className="inline-flex items-center gap-3 rounded-full border border-teal-300/25 bg-teal-500/12 px-6 py-3">
             <span className="relative flex size-3">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal-500/100 opacity-75" />
-              <span className="relative inline-flex size-3 rounded-full bg-teal-500/100" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal-400 opacity-75" />
+              <span className="relative inline-flex size-3 rounded-full bg-teal-400" />
             </span>
-            <span className="text-sm font-semibold text-teal-800">
+            <span className="text-sm font-semibold text-teal-200">
               Future blog posts here. Stay tuned for contractor marketing insights.
             </span>
           </div>

@@ -161,7 +161,7 @@ export default function ServicesPage() {
                   <div className="mt-8">
                     <Button
                       asChild
-                      className="gap-2 bg-gradient-to-r from-teal-600 to-teal-700 shadow-lg"
+                      className="gap-2"
                     >
                       <Link href={service.href}>
                         Learn More
