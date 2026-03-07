@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 
-import { ContactForm } from "@/app/_components/ContactForm"
 import { buildMetadata, createFaqJsonLd, absoluteUrl, type FaqItem } from "@/app/_lib/seo"
 import { contactInfo } from "@/app/_lib/navigation"
 import { FAQ } from "@/app/_components/FAQ"
@@ -90,7 +89,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-            No pressure, no obligation. Let&apos;s talk about your business and see if 
+            No pressure, no obligation. Let&apos;s talk about your business and see if
             we can help.
           </p>
         </div>
@@ -104,7 +103,7 @@ export default function ContactPage() {
             <div>
               <h2 className="heading-section text-slate-100">Get in Touch</h2>
               <p className="body-large mt-4">
-                We respond to every inquiry within 24 hours. Actually. Not like those 
+                We respond to every inquiry within 24 hours. Actually. Not like those
                 other agencies that ghost you.
               </p>
 
@@ -132,10 +131,16 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
+            </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-12">
-                <div className="aspect-video overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/75">
+            {/* Map */}
+            <div>
+              <div className="rounded-3xl border border-white/10 bg-zinc-900/60 p-6 sm:p-8">
+                <h3 className="text-2xl font-bold text-slate-100">Our Service Area</h3>
+                <p className="mt-2 text-slate-400">
+                  Serving contractors throughout Kansas City and the Midwest.
+                </p>
+                <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/75">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198729.54063941!2d-94.78315!3d39.0997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f1b52ae2c7e7%3A0xf3e2f7e1d6f7d2e8!2sKansas%20City%2C%20MO!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
                     width="100%"
@@ -147,27 +152,22 @@ export default function ContactPage() {
                     title="Dewbwah Marketing Location"
                   />
                 </div>
-                <p className="mt-3 text-center text-sm text-slate-400">
-                  Serving contractors throughout Kansas City and the Midwest
-                </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Contact Form */}
-            <div>
-              <div className="rounded-3xl border border-white/10 bg-zinc-900/60 p-8">
-                <h3 className="text-2xl font-bold text-slate-100">
-                  Book Your Free Strategy Call
-                </h3>
-                <p className="mt-2 text-slate-400">
-                  Fill out the form below and we&apos;ll reach out within 24 hours to schedule 
-                  a call.
-                </p>
-
-                <div className="mt-6">
-                  <ContactForm subject="Dewbwah — Contact Page Inquiry" />
-                </div>
-              </div>
+      {/* Image Placeholder */}
+      <section className="bg-zinc-950 pb-12">
+        <div className="container-padding mx-auto max-w-7xl">
+          <div className="relative aspect-[16/6] overflow-hidden rounded-3xl border border-white/10 bg-zinc-900/70">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(27,190,211,0.12),transparent_45%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(27,190,211,0.08),transparent_40%)]" />
+            <div className="absolute inset-0 grid place-items-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-400">
+                Image Placeholder
+              </p>
             </div>
           </div>
         </div>
@@ -177,12 +177,11 @@ export default function ContactPage() {
       <CTASection />
 
       {/* FAQ Section */}
-      <FAQ 
-        faqs={CONTACT_FAQS} 
+      <FAQ
+        faqs={CONTACT_FAQS}
         title="Common Questions"
         subtitle="Everything you need to know before reaching out."
       />
     </div>
   )
 }
-

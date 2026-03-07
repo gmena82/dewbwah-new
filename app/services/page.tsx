@@ -107,24 +107,36 @@ export default function ServicesPage() {
     <div className="overflow-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 py-24">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:64px_64px]" />
-        </div>
-        <div className="container-padding relative mx-auto max-w-7xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-300">
-            Our Services
-          </span>
-          <h1 className="heading-display mt-6 text-white">
-            Marketing That <br />
-            <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-              Actually Works
+      <section className="relative min-h-[72vh] overflow-hidden bg-slate-950 py-24">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="/videos/Service-Hero.mp4?v=20260307b" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-slate-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/20 to-teal-950/40" />
+        <div className="container-padding relative mx-auto flex min-h-[72vh] max-w-7xl items-center justify-center text-center">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-300">
+              Our Services
             </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-            No fluff, no jargon, no empty promises. Just proven systems that bring 
-            contractors more qualified jobs.
-          </p>
+            <h1 className="heading-display mt-6 text-white">
+              Marketing That <br />
+              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                Actually Works
+              </span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
+              No fluff, no jargon, no empty promises. Just proven systems that bring
+              contractors more qualified jobs.
+            </p>
+          </div>
         </div>
       </section>
 
