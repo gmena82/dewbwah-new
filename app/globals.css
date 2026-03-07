@@ -198,6 +198,24 @@
   animation: ticker 22s linear infinite;
 }
 
+@keyframes review-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-review-scroll {
+  width: max-content;
+  animation: review-scroll 36s linear infinite;
+}
+
+.review-carousel:hover .animate-review-scroll {
+  animation-play-state: paused;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 28%, #6fdcea 65%, #1BBED3 100%);
   -webkit-background-clip: text;

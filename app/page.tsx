@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -78,6 +79,34 @@ const SOLUTIONS = [
   "Qualified leads that become paying customers",
 ]
 
+const GOOGLE_REVIEWS = [
+  {
+    name: "Angelica Houston",
+    quote:
+      "I have known and worked with Shelby for years! Not only is she kind and amazing to work with, but she has a wealth of knowledge and resources when it comes to small businesses. I don’t have enough fingers to count the ammount of times she’s gone out of her way to send me in the right direction, given me hard advice I needed to hear and set me up for success. I highly recommend If you need someone who will go to bat for your company, and has the know how to lead you to success.. go with DewBwah!",
+  },
+  {
+    name: "Jacob Bailey",
+    quote:
+      "It has been amazing working with DewBwah. I came to Shelby knowing I needed to have good messaging for my business to market well and tell people about what we do, but I had only really managed a patchwork job and wasn't consistent. From Day 1 Shelby helped break down what made us unique, how we can show the value we provide to clients, and helped us stand out in our market. She has consistently given clear direction and helped us understand what actually works instead of us wasting time. I now have a clear picture of how to communicate the value we provide, how we are unique and can stand out, and what actions to take to grow our business. I cannot say enough good things about Shelby and DewBwah as a whole.",
+  },
+  {
+    name: "Bailey Keele",
+    quote:
+      "We had the pleasure of working with Shelby, and she has been an invaluable asset to our nonprofit. From offering insightful suggestions for improving our website to helping with ads, she truly understands how to make an impact. Shelby also played a key role in building and expanding our network. Her expertise, dedication, and attention to detail have made a huge difference in our organization's growth. Highly recommend her to anyone seeking support in the nonprofit sector!",
+  },
+  {
+    name: "Andrea Alexander",
+    quote:
+      "Shelby with DewBwah changed how I viewed my business, how I saw my clients, and how my clients viewed my business. She helped me form and strategize my message in the most perfect way. I went from believing it was all about SEO to understanding that a comprehensive marketing approach, utilizing every platform from her tutelage and education. Shelby is unlike any other marketing agent that I have met. Instead of holding all the information to herself so I am 100% reliant on her, she is teaching me how to make the best marketing decisions to get the most efficient results for my company while supporting me and my business like a mentor. I am grateful for her care and desire to see me succeed. I cannot recommend her company, DewBwah, enough!",
+  },
+  {
+    name: "Dustin Williams",
+    quote:
+      "The best! My Google Business Profile had been taken deactivated because of a rookie mistake I made. 3-4 weeks after contacting Shelby not only was it back up, but we are listed second on Google! I have been impressed with her professionalism and efficiency. I have no doubt that working with DB with be game changing for Grateful Hauling and Delivery!",
+  },
+]
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -128,6 +157,7 @@ export default function Home() {
       <ProblemSolutionSection />
       <ServicesSection />
       <WhyUsSection />
+      <ReviewsCarousel />
       <CTASection />
       <FAQ
         faqs={HOME_FAQS}
@@ -427,7 +457,7 @@ function ProblemSolutionSection() {
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/12 shadow-lg">
             <Image
-              src="/web-design-hp.jpeg"
+              src="/web-package.webp"
               alt="Stunning website design example by Dewbwah Marketing"
               width={1200}
               height={675}
@@ -509,7 +539,7 @@ function ServicesSection() {
           <div className="grid gap-px bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((service, index) => (
               <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
-                <Link href={service.href} className="group flex h-full flex-col bg-zinc-950 p-6 transition-all hover:bg-teal-500/12">
+                <Link href={service.href} className="group flex h-full flex-col rounded-md border border-transparent bg-zinc-950 p-6 transition-all hover:border-teal-300/35 hover:bg-zinc-950 hover:shadow-[inset_0_0_0_1px_rgba(27,190,211,0.22),0_0_32px_rgba(27,190,211,0.28)]">
                   <div className={`flex size-12 items-center justify-center rounded-xl bg-gradient-to-br ${service.color} shadow-md transition-transform group-hover:scale-105`}>
                     <service.icon className="size-6 text-white" />
                   </div>
@@ -613,5 +643,80 @@ function WhyUsSection() {
         </div>
       </div>
     </section>
+  )
+}
+
+function ReviewsCarousel() {
+  const loopedReviews = [...GOOGLE_REVIEWS, ...GOOGLE_REVIEWS]
+
+  return (
+    <section className="section-padding bg-zinc-950">
+      <div className="container-padding mx-auto max-w-7xl">
+        <div className="text-center">
+          <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">
+            5-Star Reviews
+          </span>
+          <h2 className="heading-section mt-4 text-slate-100">
+            Trusted by Contractors Who Want Results
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:hidden">
+          {GOOGLE_REVIEWS.map((review, index) => (
+            <ReviewCard key={`${review.name}-${index}`} review={review} compact />
+          ))}
+        </div>
+
+        <div className="review-carousel mt-10 hidden overflow-hidden md:block">
+          <div className="animate-review-scroll flex">
+            {loopedReviews.map((review, index) => (
+              <article key={`${review.name}-${index}`} className="w-[50vw] shrink-0 px-3 lg:w-[33.3333vw]">
+                <ReviewCard review={review} />
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ReviewCard({
+  review,
+  compact = false,
+}: {
+  review: { name: string; quote: string }
+  compact?: boolean
+}) {
+  const [expanded, setExpanded] = useState(false)
+  const previewLength = 260
+  const needsReadMore = review.quote.length > previewLength
+  const displayQuote =
+    !expanded && needsReadMore
+      ? `${review.quote.slice(0, previewLength).trimEnd()}...`
+      : review.quote
+
+  return (
+    <div className={`h-full rounded-2xl border border-white/12 bg-zinc-900/70 shadow-lg ${compact ? "p-5" : "p-6"}`}>
+      <div className="mb-3 flex items-center gap-1 text-[#fbbc04]">
+        {Array.from({ length: 5 }).map((_, starIndex) => (
+          <Star key={starIndex} className="size-4 fill-current" />
+        ))}
+      </div>
+      <p className="text-sm leading-relaxed text-slate-300">&ldquo;{displayQuote}&rdquo;</p>
+      {needsReadMore && (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-3 text-xs font-semibold uppercase tracking-wide text-teal-300 hover:text-teal-200"
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+      <div className="mt-4">
+        <div className="text-sm font-semibold text-slate-100">{review.name}</div>
+        <div className="text-xs text-slate-400">Google Review</div>
+      </div>
+    </div>
   )
 }

@@ -85,7 +85,7 @@ export function ContactForm({
       className={cn(
         "space-y-5 rounded-2xl p-6 shadow-xl",
         isDark
-          ? "border border-teal-300/20 bg-zinc-950/65 backdrop-blur-sm shadow-[0_0_30px_rgba(167,139,250,0.25),0_0_60px_rgba(167,139,250,0.12)]"
+          ? "border border-teal-300/20 bg-zinc-950/65 backdrop-blur-sm shadow-[0_0_30px_rgba(27,190,211,0.26),0_0_60px_rgba(27,190,211,0.14)]"
           : "border border-teal-300/20 bg-zinc-900/75",
         className
       )}
