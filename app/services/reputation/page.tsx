@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { Star, ArrowRight, CheckCircle2, MessageSquare, Shield, Bell, TrendingUp } from "lucide-react"
 
@@ -105,16 +106,14 @@ export default function ReputationPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-teal-400 via-cyan-500 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <Star className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">5-Star Reviews</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/reputation-management.webp"
+                alt="5-star reputation management dashboard"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -153,16 +152,14 @@ export default function ReputationPage() {
       <section className="section-padding bg-zinc-900/60">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500 via-teal-600 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <Bell className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">Review Dashboard</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/reputation-management.webp"
+                alt="Review monitoring dashboard and alerts"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="heading-section text-slate-100">What&apos;s Included</h2>

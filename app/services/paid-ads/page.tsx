@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
-import { Target, ArrowRight, CheckCircle2, TrendingUp, DollarSign, Users, BarChart3 } from "lucide-react"
+import { Target, ArrowRight, CheckCircle2, DollarSign, Users, BarChart3 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { buildMetadata, createFaqJsonLd, absoluteUrl, type FaqItem } from "@/app/_lib/seo"
@@ -112,16 +113,14 @@ export default function PaidAdsPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500 via-teal-600 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <Target className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">Paid Ads Dashboard</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/paid-ads.webp"
+                alt="Paid advertising performance dashboard"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -200,16 +199,14 @@ export default function PaidAdsPage() {
               </ul>
             </div>
 
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-teal-700 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <BarChart3 className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">Campaign Results</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/paid-ads.webp"
+                alt="Campaign results and conversion trends"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

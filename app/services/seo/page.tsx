@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { Search, ArrowRight, CheckCircle2, MapPin, Star, FileText, Link2 } from "lucide-react"
 
@@ -105,16 +106,14 @@ export default function SEOPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500 via-emerald-600 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <Search className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">Local SEO Results</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/glow-map.webp"
+                alt="Glowing local SEO map visualization"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -154,16 +153,14 @@ export default function SEOPage() {
       <section className="section-padding bg-zinc-900/60">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 via-teal-600 to-slate-900">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <MapPin className="size-10 text-white/80" />
-                  </div>
-                  <p className="text-lg font-bold text-white/90">SEO Strategy</p>
-                </div>
-              </div>
+            <div className="relative aspect-video overflow-hidden rounded-3xl">
+              <Image
+                src="/glow-map.webp"
+                alt="Local SEO ranking map strategy graphic"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="heading-section text-slate-100">What&apos;s Included</h2>

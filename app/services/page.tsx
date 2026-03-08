@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { Target, Search, Palette, Star, ArrowRight, CheckCircle2 } from "lucide-react"
 
@@ -51,6 +52,8 @@ const SERVICES = [
       "Lead tracking & reporting",
     ],
     color: "from-cyan-500 to-teal-600",
+    image: "/paid-ads.webp",
+    imageAlt: "Paid ads dashboard and campaign analytics",
   },
   {
     title: "Local SEO",
@@ -65,6 +68,8 @@ const SERVICES = [
       "Review generation",
     ],
     color: "from-teal-500 to-emerald-600",
+    image: "/glow-map.webp",
+    imageAlt: "Local SEO map with highlighted ranking coverage",
   },
   {
     title: "Web Design",
@@ -79,6 +84,8 @@ const SERVICES = [
       "Built-in lead forms",
     ],
     color: "from-emerald-500 to-teal-600",
+    image: "/web.webp",
+    imageAlt: "Modern website design and development preview",
   },
   {
     title: "Reputation Management",
@@ -93,6 +100,8 @@ const SERVICES = [
       "Negative review mitigation",
     ],
     color: "from-teal-400 to-cyan-500",
+    image: "/reputation-management.webp",
+    imageAlt: "Customer review reputation management interface",
   },
 ]
 
@@ -184,16 +193,14 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
-                  <div className={`relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br ${service.color} to-slate-900`}>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px]" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="mx-auto mb-4 flex size-20 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                          <service.icon className="size-10 text-white/80" />
-                        </div>
-                        <p className="text-lg font-bold text-white/90">{service.title}</p>
-                      </div>
-                    </div>
+                  <div className="relative aspect-video overflow-hidden rounded-3xl">
+                    <Image
+                      src={service.image}
+                      alt={service.imageAlt}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
