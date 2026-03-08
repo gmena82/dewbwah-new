@@ -37,7 +37,19 @@ const BLOG_FAQS: FaqItem[] = [
   },
 ]
 
-const BLOG_POSTS = [
+type BlogPost = {
+  title: string
+  category: string
+  excerpt: string
+  readTime: string
+  color: string
+  isLive: boolean
+  href?: string
+  image?: string
+  imageAlt?: string
+}
+
+const BLOG_POSTS: BlogPost[] = [
   {
     title: "The 5 Google Ads Mistakes Costing Contractors Thousands (And How to Fix Them)",
     category: "Paid Ads",
