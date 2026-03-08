@@ -55,9 +55,12 @@ const BLOG_POSTS = [
     category: "SEO",
     excerpt:
       "A step-by-step guide to dominating Google Maps and local search results. Everything you need to do and what to skip.",
-    readTime: "8 min read",
+    readTime: "11 min read",
     color: "from-teal-500 to-emerald-600",
-    isLive: false,
+    href: "/blog/local-seo-checklist-rank-1-service-area",
+    image: "/blogs/local-seo-checklist-feature.webp",
+    imageAlt: "Local SEO map visibility and ranking coverage",
+    isLive: true,
   },
   {
     title: "Why Your Contractor Website Is Not Generating Leads",
@@ -109,7 +112,7 @@ export default function BlogPage() {
               <span className="relative inline-flex size-3 rounded-full bg-teal-400" />
             </span>
             <span className="text-sm font-semibold text-teal-200">
-              New post is live. More contractor marketing guides are on the way.
+              New posts are live. More contractor marketing guides are on the way.
             </span>
           </div>
         </div>
