@@ -46,7 +46,7 @@ const BLOG_POSTS = [
     readTime: "9 min read",
     color: "from-cyan-500 to-teal-600",
     href: "/blog/google-ads-mistakes-costing-contractors-thousands",
-    image: "/paid-ads.webp",
+    image: "/blogs/google-ads-mistakes-feature.webp",
     imageAlt: "Google Ads dashboard for contractor leads",
     isLive: true,
   },

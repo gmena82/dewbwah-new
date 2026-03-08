@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, CheckCircle2, Clock } from "lucide-react"
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Most contractors lose money in Google Ads from broad match waste, weak landing pages, and broken tracking. Learn the 5 biggest mistakes and how to fix them fast.",
   path: POST_PATH,
-  image: "/paid-ads.webp",
+  image: "/blogs/google-ads-mistakes-feature.webp",
   type: "article",
 })
 
@@ -113,6 +114,7 @@ const GEO_ALIGNMENT_ITEMS = [
 
 const EXTERNAL_LINK_CLASS =
   "font-semibold text-teal-300 underline decoration-teal-400/60 underline-offset-4 transition-colors hover:text-teal-200"
+const INTERNAL_LINK_CLASS = EXTERNAL_LINK_CLASS
 
 export default function GoogleAdsMistakesPostPage() {
   const faqJsonLd = createFaqJsonLd({
@@ -128,7 +130,7 @@ export default function GoogleAdsMistakesPostPage() {
       headline: "The 5 Google Ads Mistakes Costing Contractors Thousands (And How to Fix Them)",
       description:
         "A practical breakdown of the most expensive Google Ads mistakes for contractors and how to fix each one quickly.",
-      image: [absoluteUrl("/paid-ads.webp")],
+      image: [absoluteUrl("/blogs/google-ads-mistakes-feature.webp")],
       datePublished: "2026-03-08",
       dateModified: "2026-03-08",
       mainEntityOfPage: absoluteUrl(POST_PATH),
@@ -155,16 +157,30 @@ export default function GoogleAdsMistakesPostPage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:64px_64px]" />
         </div>
         <div className="container-padding relative mx-auto max-w-4xl">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-teal-300 transition-colors hover:text-teal-200"
-          >
-            <ArrowLeft className="size-4" />
-            Back to Blog
-          </Link>
+          <div className="flex items-start justify-between gap-6">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-teal-300 transition-colors hover:text-teal-200"
+            >
+              <ArrowLeft className="size-4" />
+              Back to Blog
+            </Link>
 
-          <div className="mt-6 inline-flex items-center rounded-full border border-teal-300/30 bg-teal-500/10 px-4 py-1.5 text-sm font-semibold text-teal-200">
-            Paid Ads
+            <div className="ml-auto flex flex-col items-end gap-4 text-right">
+              <div className="inline-flex items-center rounded-full border border-teal-300/30 bg-teal-500/10 px-4 py-1.5 text-sm font-semibold text-teal-200">
+                Paid Ads
+              </div>
+              <div className="flex flex-wrap items-center justify-end gap-5 text-sm text-slate-300">
+                <span className="inline-flex items-center gap-2">
+                  <Calendar className="size-4 text-teal-300" />
+                  March 8, 2026
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Clock className="size-4 text-teal-300" />
+                  9 min read
+                </span>
+              </div>
+            </div>
           </div>
 
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
@@ -173,23 +189,22 @@ export default function GoogleAdsMistakesPostPage() {
               (And How to Fix Them)
             </span>
           </h1>
-
-          <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-slate-300">
-            <span className="inline-flex items-center gap-2">
-              <Calendar className="size-4 text-teal-300" />
-              March 8, 2026
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <Clock className="size-4 text-teal-300" />
-              9 min read
-            </span>
-          </div>
         </div>
       </section>
 
       <section className="section-padding bg-zinc-950">
         <article className="container-padding mx-auto max-w-4xl text-slate-300">
           <div className="rounded-3xl border border-white/10 bg-zinc-900/50 p-8 md:p-10">
+            <div className="relative mb-10 aspect-video overflow-hidden rounded-2xl border border-white/10">
+              <Image
+                src="/blogs/google-ads-mistakes-feature.webp"
+                alt="Feature image for Google Ads mistakes costing contractors thousands"
+                fill
+                sizes="(min-width: 1024px) 896px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
             <div className="space-y-5 text-lg leading-relaxed">
               <p>
                 When a homeowner has a pipe burst, an AC failure in July, or a leaking roof, they
@@ -198,8 +213,11 @@ export default function GoogleAdsMistakesPostPage() {
               </p>
               <p>
                 It is also why mistakes get expensive fast. In many home-service markets, clicks
-                routinely cost $30 to $100+ for high-intent terms. If account structure, landing
-                pages, and tracking are not tight, you are paying premium prices for low-quality
+                routinely cost $30 to $100+ for high-intent terms. If account structure,{" "}
+                <Link href="/services/web-design" className={INTERNAL_LINK_CLASS}>
+                  landing pages
+                </Link>
+                {" "}and tracking are not tight, you are paying premium prices for low-quality
                 outcomes.
               </p>
               <p>
@@ -275,7 +293,21 @@ export default function GoogleAdsMistakesPostPage() {
                     {mistake.fixes.map((fix) => (
                       <li key={fix} className="flex gap-3 leading-relaxed">
                         <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal-300" />
-                        <span>{fix}</span>
+                        <span>
+                          {mistake.title === "Sending Paid Traffic to a Generic Homepage" &&
+                          fix ===
+                            "Add trust signals early: reviews, licenses, guarantees, and service-area proof." ? (
+                            <>
+                              Add trust signals early:{" "}
+                              <Link href="/services/reputation" className={INTERNAL_LINK_CLASS}>
+                                reviews
+                              </Link>
+                              , licenses, guarantees, and service-area proof.
+                            </>
+                          ) : (
+                            fix
+                          )}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -335,7 +367,11 @@ export default function GoogleAdsMistakesPostPage() {
               </p>
               <p className="mt-4 leading-relaxed">
                 Fix these five mistakes and paid search can move from unpredictable spend to a
-                repeatable lead engine that drives booked jobs, not just clicks.
+                {" "}
+                <Link href="/" className={INTERNAL_LINK_CLASS}>
+                  repeatable lead engine
+                </Link>{" "}
+                that drives booked jobs, not just clicks.
               </p>
             </section>
 
