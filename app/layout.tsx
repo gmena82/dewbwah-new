@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next"
-import { Cinzel, Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 
@@ -11,19 +10,6 @@ import {
   createLocalBusinessJsonLd,
   createWebsiteJsonLd,
 } from "./_lib/seo"
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-})
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["600", "700", "800"],
-  variable: "--font-head",
-})
 
 export const metadata: Metadata = {
   title: {
@@ -80,7 +66,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} ${cinzel.variable} flex min-h-screen flex-col bg-background text-foreground antialiased`}>
+      <body className="flex min-h-screen flex-col bg-background text-foreground antialiased">
         <Script id="trusted-types-policy" strategy="beforeInteractive">
           {`
             if (typeof window !== 'undefined' && window.trustedTypes && !window.trustedTypes.defaultPolicy) {
