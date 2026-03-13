@@ -127,6 +127,7 @@ export default function WebDesignPage() {
             <p className="body-large mx-auto mt-4 max-w-3xl">
               Your site should clearly explain your work, build trust fast, and make the next step obvious.
               Weak websites are decoration. Strong websites move people from browsing to contacting your team.
+              If you want traffic too, pair this with our <Link href="/services/seo" className="text-teal-300 underline underline-offset-4 hover:text-teal-200">SEO service</Link>.
             </p>
           </div>
 

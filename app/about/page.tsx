@@ -152,6 +152,15 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-slate-100">
                     Angie — Operations & Finance
                   </h3>
+                  <div className="mt-4 overflow-hidden rounded-xl border border-white/10">
+                    <Image
+                      src="/about-angie-placeholder-2026-03-13.png"
+                      alt="Angie placeholder portrait"
+                      width={1200}
+                      height={800}
+                      className="h-auto w-full object-cover"
+                    />
+                  </div>
                   <p className="mt-3 text-slate-400">
                     Angie runs the financial and operational backbone of DewBwah: contracts, proposals, invoices, expenses, vendor payments, approvals, and internal systems.
                     If something gets signed, billed, paid, or approved, Angie is usually involved.
