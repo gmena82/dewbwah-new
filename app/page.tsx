@@ -11,6 +11,7 @@ import {
   Palette,
   Star,
   CheckCircle2,
+  FilePenLine,
   TrendingUp,
   Users,
   Clock,
@@ -53,6 +54,14 @@ const SERVICES = [
     icon: Palette,
     href: "/services/web-design",
     color: "from-emerald-500 to-teal-600",
+    featured: false,
+  },
+  {
+    title: "Content Production",
+    description: "Done-for-you monthly content that keeps your brand active across search, AI, and social.",
+    icon: FilePenLine,
+    href: "/services",
+    color: "from-cyan-500 to-blue-600",
     featured: false,
   },
   {
@@ -137,6 +146,10 @@ const HOME_FAQS = [
   {
     question: "How much does contractor marketing cost?",
     answer: "Our services start at $1,500/month for single-service packages. Most contractors invest $2,500-$5,000/month for comprehensive marketing. We'll give you a custom quote based on your goals, market, and competition during your free strategy call.",
+  },
+  {
+    question: "What is included in the Content Production Package?",
+    answer: "Our Content Production Package includes monthly topic planning, SEO-focused website updates, blog publishing, and social content repurposing. It is built for contractors who want steady visibility in Google, AI answers, and social channels without adding content work to their internal team.",
   },
   {
     question: "What makes Dewbwah different from other marketing agencies?",
@@ -490,11 +503,37 @@ function ServicesSection() {
       <div className="container-padding relative mx-auto max-w-7xl">
         <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={stagger} className="text-center">
           <motion.span variants={fadeInUp} className="inline-block rounded-full bg-teal-500/15 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-teal-300">What We Do</motion.span>
-          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-100">Marketing That Actually Works</motion.h2>
-          <motion.p variants={fadeInUp} className="body-large mx-auto mt-4 max-w-2xl">No fluff, no jargon. Just proven systems that bring contractors more jobs.</motion.p>
+          <motion.h2 variants={fadeInUp} className="heading-section mt-4 text-slate-100">What Services Should Contractors Invest In First?</motion.h2>
+          <motion.p variants={fadeInUp} className="body-large mx-auto mt-4 max-w-2xl">Start with the channel that drives immediate demand, then layer in systems that compound over time. That is how we turn marketing into predictable local jobs.</motion.p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mt-14 overflow-hidden rounded-3xl shadow-2xl shadow-slate-900/10">
+        <div className="mt-12 rounded-3xl border border-teal-300/20 bg-zinc-950/80 p-6 md:p-8">
+          <h3 className="text-2xl font-bold text-slate-100">What Is the Content Production Package?</h3>
+          <p className="mt-3 max-w-3xl text-slate-300">
+            It is a done-for-you publishing system for contractors who need fresh, local-market content without slowing down field operations.
+            We plan, write, publish, and repurpose your content so your brand stays active across your website, search, AI, and social channels.
+          </p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {[
+              "Monthly content strategy + keyword targets",
+              "SEO service page updates for priority services",
+              "Blog/article publishing to support local rankings",
+              "Social post repurposing from long-form content",
+              "Offer/campaign content aligned with your ads",
+              "Performance review + next-month content plan",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-2 rounded-lg border border-white/10 bg-zinc-900/70 p-3 text-sm text-slate-300">
+                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal-300" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-sm text-slate-400">
+            Want details? Visit our <Link href="/services" className="text-teal-300 underline underline-offset-4 hover:text-teal-200">Services page</Link> or <Link href="/contact" className="text-teal-300 underline underline-offset-4 hover:text-teal-200">book a strategy call</Link> for package fit and timeline.
+          </p>
+        </div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mt-10 overflow-hidden rounded-3xl shadow-2xl shadow-slate-900/10">
           <div className="grid lg:grid-cols-2">
             <div className="relative bg-gradient-to-br from-teal-700 via-teal-800 to-slate-900 p-8 md:p-10">
               <div className="pointer-events-none absolute inset-0 opacity-20">

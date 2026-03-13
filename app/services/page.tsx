@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Target, Search, Palette, Star, ArrowRight, CheckCircle2 } from "lucide-react"
+import { Target, Search, Palette, Star, ArrowRight, CheckCircle2, FilePenLine } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { buildMetadata, createFaqJsonLd, absoluteUrl, type FaqItem } from "@/app/_lib/seo"
@@ -11,7 +11,7 @@ import { CTASection } from "@/app/_components/CTASection"
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Contractor marketing services: Paid Ads, Local SEO, Web Design, and Reputation Management. No BS, just results.",
+    "Contractor marketing services: Paid Ads, Local SEO, Web Design, Content Production, and Reputation Management. No BS, just results.",
   path: "/services",
 })
 
@@ -22,7 +22,11 @@ const SERVICES_FAQS: FaqItem[] = [
   },
   {
     question: "Can I bundle multiple services together?",
-    answer: "Yes! We offer bundled packages that include multiple services at a discounted rate. Most clients get the best results from combining Paid Ads with SEO, or a full-service package that includes all four services.",
+    answer: "Yes. Most contractors pair Paid Ads with Local SEO, then add our Content Production Package to keep their website and channels active. We can combine services into one monthly plan based on your lead goals and service area.",
+  },
+  {
+    question: "What is included in your Content Production Package?",
+    answer: "Our Content Production Package includes a monthly content plan, SEO-focused service page updates, blog/article publishing, short-form social posts, and repurposing across channels. The goal is simple: keep your business visible in search, AI answers, and social feeds without your team having to write everything in-house.",
   },
   {
     question: "How do you measure success?",
@@ -88,6 +92,22 @@ const SERVICES = [
     imageAlt: "Modern website design and development preview",
   },
   {
+    title: "Content Production Package",
+    description:
+      "Consistent, done-for-you content that keeps your business visible in Google, AI answers, and social feeds.",
+    icon: FilePenLine,
+    href: "/contact",
+    features: [
+      "Monthly content planning",
+      "SEO service page updates",
+      "Blog and article publishing",
+      "Social content repurposing",
+    ],
+    color: "from-cyan-500 to-blue-600",
+    image: "/web-package.webp",
+    imageAlt: "Content production planning and publishing workflow",
+  },
+  {
     title: "Reputation Management",
     description:
       "5-star review systems that build trust before customers even call. We help you get more reviews and respond to every one.",
@@ -136,14 +156,13 @@ export default function ServicesPage() {
               Our Services
             </span>
             <h1 className="heading-display mt-6 text-white">
-              Marketing That <br />
+              Which Marketing Services <br />
               <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                Actually Works
+                Grow Contractor Revenue?
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-              No fluff, no jargon, no empty promises. Just proven systems that bring
-              contractors more qualified jobs.
+              Start with the channel that solves your biggest bottleneck now, then stack services for long-term growth. Our Paid Ads, SEO, Web Design, Content Production, and Reputation systems work together to produce qualified local jobs.
             </p>
           </div>
         </div>

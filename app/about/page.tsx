@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle2, Target, Zap, Shield, Users, ArrowRight } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
+import { Target, Zap, Shield, Users } from "lucide-react"
 import { buildMetadata, createFaqJsonLd, absoluteUrl, type FaqItem } from "@/app/_lib/seo"
 import { FAQ } from "@/app/_components/FAQ"
 import { CTASection } from "@/app/_components/CTASection"
@@ -135,25 +132,36 @@ export default function AboutPage() {
               <div className="mt-8 space-y-8">
                 <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
                   <h3 className="text-xl font-bold text-slate-100">
-                    Shelby — Brand & Strategy
+                    Shelby DuBois — Founder
                   </h3>
                   <p className="mt-3 text-slate-400">
-                    Shelby is the creative force behind every campaign. She knows how to make
-                    contractors stand out in crowded markets and turn browsers into buyers.
-                    With a background in brand strategy and a no-BS attitude, she cuts through
-                    the noise to find what actually works.
+                    Shelby started DewBwah after years of watching contractors get sold marketing that sounded great and did nothing for the business.
+                    She&apos;s been in sales since she was 16, and she quickly cuts through buzzwords to identify what a company actually needs to grow.
+                  </p>
+                  <p className="mt-3 text-slate-400">
+                    Today she leads relationships and strategy, working directly with owners to map how jobs are sold, where leads break down, and what profitable growth should look like.
+                    Then she aligns execution across the team: Kyle on paid ads, Tony on SEO/strategy, Davis on websites, and Angie on finance/ops.
+                  </p>
+                  <p className="mt-3 text-slate-400">
+                    Outside of DewBwah, Shelby is raising Bryson and Nash while building a company that rejects generic agency playbooks.
+                    Her standard is simple: understand the business first, then build marketing that works.
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6">
                   <h3 className="text-xl font-bold text-slate-100">
-                    Angie — Operations & Numbers
+                    Angie — Operations & Finance
                   </h3>
                   <p className="mt-3 text-slate-400">
-                    Angie keeps the machine running. She&apos;s obsessed with ROI and makes sure
-                    every dollar you spend works harder than the last. From tracking leads to
-                    optimizing campaigns, she&apos;s the reason our clients see real, measurable
-                    results.
+                    Angie runs the financial and operational backbone of DewBwah: contracts, proposals, invoices, expenses, vendor payments, approvals, and internal systems.
+                    If something gets signed, billed, paid, or approved, Angie is usually involved.
+                  </p>
+                  <p className="mt-3 text-slate-400">
+                    She is also CEO of a foundation repair company in another state, giving her direct experience with how contractor businesses actually operate — crews, margins, scheduling, and real-world chaos.
+                    That perspective keeps DewBwah grounded in what owners need, not what agencies pitch.
+                  </p>
+                  <p className="mt-3 text-slate-400">
+                    Her favorite title is Nana. Angie has three kids and three grandkids, and that family-first clarity shows up in how she protects the business from waste and keeps the wheels on the bus.
                   </p>
                 </div>
               </div>

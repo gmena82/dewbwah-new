@@ -41,23 +41,23 @@ const WEB_DESIGN_FAQS: FaqItem[] = [
 const FEATURES = [
   {
     icon: Smartphone,
-    title: "Mobile-First Design",
-    description: "70%+ of your traffic comes from phones. We design for mobile first, always.",
+    title: "Mobile First",
+    description: "Most contractor traffic is on phones. We design and test for mobile before anything else.",
   },
   {
     icon: Zap,
-    title: "Lightning Fast",
-    description: "Sub-3-second load times that keep visitors engaged and Google happy.",
+    title: "Fast",
+    description: "Speed matters for both Google rankings and lead conversion. Your pages load quickly and cleanly.",
   },
   {
     icon: Layout,
-    title: "Conversion Focused",
-    description: "Every element is designed to turn visitors into leads. No fluff, no distractions.",
+    title: "Built to Convert",
+    description: "Pretty design is easy. Real conversion structure is harder — we build pages to guide visitors toward calls, forms, and booked estimates.",
   },
   {
     icon: MousePointer,
-    title: "Easy to Update",
-    description: "Simple backend that lets you update content without calling a developer.",
+    title: "Easy to Manage",
+    description: "You get a clean backend so your team can update text, photos, and offers without bottlenecks.",
   },
 ]
 
@@ -84,14 +84,14 @@ export default function WebDesignPage() {
                 Web Design
               </span>
               <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Websites That <br />
+                Websites That Actually <br />
                 <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                  Convert Visitors
+                  Bring You Jobs
                 </span>
               </h1>
               <p className="mt-6 text-lg text-slate-300">
-                Your website isn&apos;t a brochure — it&apos;s a sales machine. We build 
-                fast, mobile-first sites that turn visitors into paying customers.
+                A good-looking website alone won&apos;t make your phone ring. We build fast,
+                mobile-first websites engineered to turn visitors into real leads and booked jobs.
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button
@@ -100,7 +100,7 @@ export default function WebDesignPage() {
                   className="gap-2 px-8 py-6 text-lg"
                 >
                   <Link href="/contact">
-                    Get Started
+                    Start Your Website
                     <ArrowRight className="size-5" />
                   </Link>
                 </Button>
@@ -123,9 +123,10 @@ export default function WebDesignPage() {
       <section className="section-padding bg-zinc-950">
         <div className="container-padding mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="heading-section text-slate-100">Built for Results</h2>
-            <p className="body-large mx-auto mt-4 max-w-2xl">
-              Pretty websites are useless if they don&apos;t generate leads. Ours do both.
+            <h2 className="heading-section text-slate-100">A Website Should Sell For You</h2>
+            <p className="body-large mx-auto mt-4 max-w-3xl">
+              Your site should clearly explain your work, build trust fast, and make the next step obvious.
+              Weak websites are decoration. Strong websites move people from browsing to contacting your team.
             </p>
           </div>
 
@@ -153,21 +154,21 @@ export default function WebDesignPage() {
         <div className="container-padding mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="heading-section text-slate-100">What&apos;s Included</h2>
+              <h2 className="heading-section text-slate-100">Everything Needed To Launch A Website That Works</h2>
               <p className="body-large mt-4">
-                A complete website package, from design to launch.
+                You get the full foundation required to launch confidently and convert traffic into leads.
               </p>
 
               <ul className="mt-8 space-y-4">
                 {[
-                  "Custom design (not a template)",
-                  "Mobile-responsive development",
-                  "On-page SEO optimization",
-                  "Lead capture forms",
-                  "Google Analytics setup",
-                  "SSL security certificate",
-                  "Fast hosting included",
-                  "30-day post-launch support",
+                  "Custom design built for your company",
+                  "Mobile-first development",
+                  "SEO-friendly page structure",
+                  "Service pages designed to rank in Google",
+                  "Fast, modern hosting",
+                  "Lead capture forms that actually convert",
+                  "Google-friendly performance and speed",
+                  "Clean backend so you can update things yourself",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-slate-300">
                     <CheckCircle2 className="size-5 text-teal-300" />
@@ -175,6 +176,10 @@ export default function WebDesignPage() {
                   </li>
                 ))}
               </ul>
+
+              <p className="mt-6 text-slate-300">
+                Bottom line: this website is built to help you win more jobs, not just look good online.
+              </p>
             </div>
 
             <div className="relative aspect-video overflow-hidden rounded-3xl">
