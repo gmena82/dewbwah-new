@@ -185,8 +185,8 @@ export default function WebDesignPage() {
 
             <div className="relative aspect-video overflow-hidden rounded-3xl">
               <Image
-                src="/web-package.webp"
-                alt="Website package and page layout mockup"
+                src="/web-design-conversion-package-2026-03-13.png"
+                alt="Contractor website shown on desktop and mobile with clear conversion-focused layout"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
